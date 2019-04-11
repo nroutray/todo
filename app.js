@@ -11,6 +11,6 @@ app.use(express.static('./public'));
 
 //fire controllers i.e. app can be used to handle request in the controller section
 todoController(app);
-
-app.listen(5000);
+const port = 5000 || PROCESS.ENV.PORT;
+app.listen(port);
 console.log('Server running at port 5000...');
